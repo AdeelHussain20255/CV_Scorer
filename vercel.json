@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "buildCommand": "cd frontend && npm install && npm run build",
+  "outputDirectory": "frontend/.next",
+  "framework": "nextjs",
+  "functions": {
+    "api/screen_candidates.py": {
+      "runtime": "python3.9",
+      "maxDuration": 60
+    },
+    "api/index.py": {
+      "runtime": "python3.9",
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/screen-candidates",
+      "dest": "/api/screen_candidates.py"
+    },
+    {
+      "src": "/api",
+      "dest": "/api/index.py"
+    }
+  ],
+  "env": {
+    "GEMINI_API_KEY": "@gemini_api_key",
+    "GMAIL_USER": "@gmail_user",
+    "GMAIL_APP_PASSWORD": "@gmail_app_password",
+    "COMPANY_NAME": "@company_name"
+  }
+}
