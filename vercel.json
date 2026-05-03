@@ -22,11 +22,5 @@
       "src": "/api",
       "dest": "/api/index.py"
     }
-  ],
-  "env": {
-    "GEMINI_API_KEY": "@gemini_api_key",
-    "GMAIL_USER": "@gmail_user",
-    "GMAIL_APP_PASSWORD": "@gmail_app_password",
-    "COMPANY_NAME": "@company_name"
-  }
+  ]
 }
